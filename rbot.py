@@ -48,7 +48,7 @@ def route_add_article():
 	# 	' sent a high five to ' + str(request.args.get('text'))
 	# return result
 
-@app.route("/article", methods=['GET'])
+@app.route("/get_article", methods=['GET'])
 def route_get_article():
 	arg = request.form['text']
 	return search_content_by_id(request.form['text'])
