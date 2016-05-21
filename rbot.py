@@ -19,11 +19,9 @@ def get_from_test_route():
 def route_create_list():
 	return "ok"
 
-@app.route("/highfive", methods=['GET', 'POST'])
+@app.route("/highfive", methods=['POST'])
 def route_highfive():
-	return "sure"
-	print("args: " + request.args)
-	sys.stdout.flush()
+	return "args: " + request.args
 	result = {}
 	result.text = "@" + request.args.get('user_name') + \
 		' sent a high five to ' + request.args.get('text')
