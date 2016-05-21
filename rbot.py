@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from flask import Flask
 from flask import request
+import sys
 app = Flask(__name__)
 
 @app.route("/")
@@ -17,6 +18,7 @@ def route_create_list():
 @app.route("/highfive", methods=['POST'])
 def route_highfive():
 	print("args: " + request.args)
+	sys.stdout.flush()
 	result = {}
 	result.text = "@" + request.args.get('user_name') + \
 		' sent a high five to ' + request.args.get('text')
