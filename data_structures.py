@@ -14,16 +14,17 @@ class User(object):
     
 class List(object):
     
-    def __init__(self, list_id):
+    def __init__(self, list_id, list_name):
         '''
         Args:
-            lid: list ID
-            cids: list of IDs of contents the list contains
+            list_id: list ID
+            list_name: list name
         '''
         self.lid = list_id
-        self.cids = list()
+        self.lname = self.list_name
         self.permission_level = 0 # private = 0, public = 1 
-    
+        self.cids = list()
+        
     
 class Content(object):
     
