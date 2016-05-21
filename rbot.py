@@ -21,7 +21,7 @@ def route_create_list():
 
 @app.route("/highfive", methods=['POST'])
 def route_highfive():
-	result = "args: " + str(request.args.get('user_name')) + " " + str(request.args.get('text'))
+	result = "args: " + str(request.args.get('user_name')) + " " + str(request.args.get('text') + " from " + str(request.args))
 	return result
 	# result = {}
 	# result.text = "@" + str(request.args.get('user_name')) + \
