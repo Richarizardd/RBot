@@ -15,7 +15,7 @@ def send_intro_text():
 def route_create_list():
 	return "ok"
 
-@app.route("/highfive", methods=['POST'])
+@app.route("/highfive", methods=['GET', 'POST'])
 def route_highfive():
 	print("args: " + request.args)
 	sys.stdout.flush()
