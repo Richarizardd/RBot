@@ -1,1 +1,1 @@
-web: python rbot.py
+web: gunicorn rbot:app --log-file=-
