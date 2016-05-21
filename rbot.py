@@ -21,6 +21,7 @@ def route_create_list():
 
 @app.route("/highfive", methods=['GET', 'POST'])
 def route_highfive():
+	return "sure"
 	print("args: " + request.args)
 	sys.stdout.flush()
 	result = {}
