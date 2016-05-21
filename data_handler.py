@@ -196,12 +196,12 @@ def search_contents_by_user(user_id):
         cursor = conn.execute("SELECT * FROM Content WHERE UserID = '%d'" % user_id)
         for row in cursor:
             (title, desc, category, user_id) = row
-            try:
-                cursor = conn.execute("SELECT UserName FROM Users WHERE UserID = '%d'" % user_id)
-                user_name = cursor.fetchone()[0]
-                info.append([title, desc, category, user_name])
-            except Exception:
-                pass
+            # try:
+            #     cursor = conn.execute("SELECT UserName FROM Users WHERE UserID = '%d'" % user_id)
+            #     user_name = cursor.fetchone()[0]
+            #     info.append([title, desc, category, user_name])
+            # except Exception:
+            #     pass
     except Exception:
         pass
     
