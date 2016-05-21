@@ -56,7 +56,8 @@ def set_up_DB(conn):
                 Title varchar(255),
                 Description text,
                 Category varchar(255),
-                UserID int
+                UserID int,
+                URL int,
             );
             """)
     except Exception:
@@ -105,7 +106,7 @@ def add_list(list_name, user_id, permission=0):
  
     
 #adds new content
-def add_content(title, desc, category, user_id, list_id):
+def add_content(title, desc, category, url, user_id, list_id):
     
     #create a new entry in the Content table
     try:
